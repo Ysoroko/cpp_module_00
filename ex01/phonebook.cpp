@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/14 14:37:05 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/14 15:07:37 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static void	ft_search(void)
 
 int main(void)
 {
-	Contact			contact;
 	std::string		user_command;
 
 	while (1)
