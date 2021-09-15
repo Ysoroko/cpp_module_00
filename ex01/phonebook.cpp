@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/14 15:07:37 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/15 10:59:10 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int main(void)
 
 	while (1)
 	{
-		std::cout << "Please enter the command (SEARCH / ADD / EXIT)\n>";
+		std::cout << "Please enter a command (SEARCH / ADD / EXIT)\n>";
+		// 
 		std::cin >> user_command;
 		if (user_command == "EXIT")
 			return (0);
