@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:13:06 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/15 11:52:53 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/15 14:04:15 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
 	std::string const _phone_number;
 	std::string const _darkest_secret;
 public:
+	Contact();
 	// Prototype of the constructor
 	Contact(std::string f, std::string l, std::string n, std::string ph, std::string d);
 	// Prototype of the destructor
