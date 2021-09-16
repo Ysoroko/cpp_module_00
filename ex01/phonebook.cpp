@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 15:15:24 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/16 16:01:56 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,30 @@ void	ft_add(Contact phonebook[8], int i)
 	std::string	phone_number;
 	std::string	darkest_secret;
 
-	std::cout << "Please enter the contact's first name:\n>";
-	std::cin >> first_name;
-	std::cout << "Please enter the contact's last name:\n>";
-	std::cin >> last_name;
-	std::cout << "Please enter the contact's nickname:\n>";
-	std::cin >> nickname;
-	std::cout << "Please enter the contact's phone number:\n>";
-	std::cin >> phone_number;
-	std::cout << "Please enter the contact's darkest secret:\n>";
-	std::cin >> darkest_secret;
+	std::cout << "Please enter the contact's first name:\n> ";
+	std::getline(std::cin, first_name);
+	std::cout << "Please enter the contact's last name:\n> ";
+	std::getline(std::cin, last_name);
+	std::cout << "Please enter the contact's nickname:\n> ";
+	std::getline(std::cin, nickname);
+	std::cout << "Please enter the contact's phone number:\n> ";
+	std::getline(std::cin, phone_number);
+	std::cout << "Please enter the contact's darkest secret:\n> ";
+	std::getline(std::cin, darkest_secret);
 
 	phonebook[i].ft_set_values(first_name, last_name, nickname, phone_number, darkest_secret);
 }
 
-static void	ft_search(Contact phonebook[8], int i)
+void	ft_search(Contact phonebook[8], int i)
 {
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;
-	int			user_index;
+	std::string	user_index;
+	int			index;
 
 	// setw(10) = sets the width to 10 characters
+	std::cout << std::endl;
 	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
 	for (int j = 1; j < i + 1; j++)
 	{
@@ -65,9 +67,12 @@ static void	ft_search(Contact phonebook[8], int i)
 		}
 		std::cout << std::setw(10) << j << "|" << std::setw(10) << first_name << "|" << std::setw(10) << last_name << "|" << std::setw(10) << nickname<< "|" << std::endl;
 	}
-	std::cout << "Please enter the contact's index to see more details:\n>";
-	std::cin >> user_index;
-	phonebook[user_index - 1].ft_print();
+	std::cout << std::endl;
+	std::cout << "Please enter the contact's index to see more details:\n> ";
+	std::getline(std::cin, user_index);
+	index = atoi(user_index.c_str());
+	if (index)
+		phonebook[stoi(user_index) - 1].ft_print();
 	return ;
 }
 
@@ -80,14 +85,14 @@ int main(void)
 	i = 0;
 	while (1)
 	{
-		std::cout << "Please enter a command (SEARCH / ADD / EXIT)\n>";
-		std::cin >> user_command;
+		std::cout << "Please enter a command (SEARCH / ADD / EXIT)\n> ";
+		std::getline(std::cin, user_command);
 		if (user_command == "EXIT")
 			return (0);
 		else if (user_command == "ADD")
 		{
-			if (i >= 8)
-				std::cout << "Cannot add more than 8 contacts\n>";
+			if (i >= 7)
+				std::cout << "Cannot add more than 8 contacts\n> ";
 			else
 			{
 				ft_add(phonebook, i);

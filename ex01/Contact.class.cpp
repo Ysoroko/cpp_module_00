@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:15:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 15:16:38 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/16 15:33:39 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 // Definition and implementation of the constructor
 // : first_name(f) assigns value f to first_name attribute
-// Contact::Contact(std::string f, std::string l, std::string n, std::string ph, std::string d)
-// 	: _first_name(f), _last_name(l), _nickname(n), _phone_number(ph), _darkest_secret(d)
-// {
-// 
-// }
+//Contact::Contact(std::string f, std::string l, std::string n, std::string ph, std::string d)
+//	: _first_name(f), _last_name(l), _nickname(n), _phone_number(ph), _darkest_secret(d)
+//{
+//
+//}
 
 Contact::Contact()
 {
-	
+
 }
 
 Contact::~Contact()
