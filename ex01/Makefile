@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 11:13:57 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/16 14:45:37 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/16 16:17:26 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,4 +42,4 @@ fclean: clean
 	
 re:	fclean all
 
-.PHONY:	all megaphone clean fclean re
+.PHONY:	all phonebook clean fclean re
