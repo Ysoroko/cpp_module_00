@@ -6,13 +6,13 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/15 14:18:49 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/16 15:15:24 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
 
-Contact	ft_add(void)
+void	ft_add(Contact phonebook[8], int i)
 {
 	std::string	first_name;
 	std::string	last_name;
@@ -31,12 +31,43 @@ Contact	ft_add(void)
 	std::cout << "Please enter the contact's darkest secret:\n>";
 	std::cin >> darkest_secret;
 
-	Contact	new_contact(first_name, last_name, nickname, phone_number, darkest_secret);
-	return (new_contact);
+	phonebook[i].ft_set_values(first_name, last_name, nickname, phone_number, darkest_secret);
 }
 
-static void	ft_search(void)
+static void	ft_search(Contact phonebook[8], int i)
 {
+	std::string	first_name;
+	std::string	last_name;
+	std::string	nickname;
+	int			user_index;
+
+	// setw(10) = sets the width to 10 characters
+	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
+	for (int j = 1; j < i + 1; j++)
+	{
+		first_name = phonebook[j - 1].get_first_name();
+		last_name = phonebook[j - 1].get_last_name();
+		nickname = phonebook[j - 1].get_nickname();
+		if (first_name.length() >= 10)
+		{
+			first_name.resize(9);
+			first_name.resize(10, '.');
+		}
+		if (last_name.length() >= 10)
+		{
+			last_name.resize(9);
+			last_name.resize(10, '.');
+		}
+		if (nickname.length() >= 10)
+		{
+			nickname.resize(9);
+			nickname.resize(10, '.');
+		}
+		std::cout << std::setw(10) << j << "|" << std::setw(10) << first_name << "|" << std::setw(10) << last_name << "|" << std::setw(10) << nickname<< "|" << std::endl;
+	}
+	std::cout << "Please enter the contact's index to see more details:\n>";
+	std::cin >> user_index;
+	phonebook[user_index - 1].ft_print();
 	return ;
 }
 
@@ -50,7 +81,6 @@ int main(void)
 	while (1)
 	{
 		std::cout << "Please enter a command (SEARCH / ADD / EXIT)\n>";
-		// 
 		std::cin >> user_command;
 		if (user_command == "EXIT")
 			return (0);
@@ -60,13 +90,14 @@ int main(void)
 				std::cout << "Cannot add more than 8 contacts\n>";
 			else
 			{
-				Contact new_contact = ft_add();
-				phonebook[i] = new_contact;
+				ft_add(phonebook, i);
 				i++;
 			}
 		}
 		else if (user_command == "SEARCH")
-			ft_search();
+		{
+			ft_search(phonebook, i);
+		}
 		else
 			std::cout << "Only ADD, SEARCH and EXIT commands are accepted\n";
 	}

@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:13:06 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/15 14:04:15 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/16 14:53:42 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,35 @@
 # define CONTACT_CLASS_HPP
 
 # include <iostream>
+# include <iomanip>
 
 class Contact
 {
 private:
 	// Member attributes
-	std::string const _first_name;
-	std::string const _last_name;
-	std::string const _nickname;
-	std::string const _phone_number;
-	std::string const _darkest_secret;
+	std::string _first_name;
+	std::string _last_name;
+	std::string _nickname;
+	std::string _phone_number;
+	std::string _darkest_secret;
 public:
-	Contact();
 	// Prototype of the constructor
-	Contact(std::string f, std::string l, std::string n, std::string ph, std::string d);
+	Contact();
+	
+	// Alternative definition of the constructor:
+	//Contact(std::string f, std::string l, std::string n, std::string ph, std::string d);
+	
 	// Prototype of the destructor
 	~Contact();
+
+	void ft_set_values(std::string f, std::string l, std::string n, std::string ph, std::string d);
+
 	// Const before ";" tells that in the function we will never modify the instance's attributes
 	// (No assignation inside, like this.first_name = "John Doe")
 	void ft_print(void) const;
+
+	std::string	get_first_name() const;
+	std::string	get_last_name() const;
+	std::string	get_nickname() const;
 };
-
-Contact::~Contact()
-{
-}
-
 #endif
