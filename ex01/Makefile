@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 11:13:57 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/17 11:30:59 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/17 14:35:48 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@
 
 NAME		=	phonebook
 
-SRC			=	phonebook.cpp \
-				Contact.class.cpp \
-				Phonebook.class.cpp
+SRC			=	phonebook_main.cpp \
+				Contact.cpp \
+				Phonebook.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 
@@ -43,4 +43,4 @@ fclean: clean
 	
 re:	fclean all
 
-.PHONY:	all phonebook clean fclean re
+.PHONY:	all clean fclean re

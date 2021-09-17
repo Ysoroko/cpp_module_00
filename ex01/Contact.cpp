@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:15:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 11:37:22 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/17 14:36:48 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "phonebook_main.hpp"
 
 // Definition and implementation of the constructor
 // : first_name(f) assigns value f to first_name attribute

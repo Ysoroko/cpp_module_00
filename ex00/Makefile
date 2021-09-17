@@ -6,9 +6,11 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 11:13:57 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/14 13:58:33 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/17 14:33:54 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# ------------------------------------- VARS ----------------------------------
 
 NAME		=	megaphone
 
@@ -25,6 +27,8 @@ EXE_NAME	=	-o megaphone
 
 EXEC		=	megaphone
 
+# ------------------------------------- RULES ---------------------------------
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -38,6 +42,8 @@ fclean: clean
 	
 re:	fclean all
 
+# ------------------------------------- TESTS ----------------------------------
+
 test1: all
 	./$(EXEC) "shhhhh... I think the students are asleep..."
 
@@ -47,4 +53,4 @@ test2: all
 test3: all
 	./$(EXEC)
 
-.PHONY:	all megaphone clean fclean re test1 test2 test3
+.PHONY:	all clean fclean re test1 test2 test3
