@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 11:13:57 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/16 16:17:26 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/17 11:03:52 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@
 NAME		=	phonebook
 
 SRC			=	phonebook.cpp \
-				Contact.class.cpp
+				Contact.class.cpp \
+				Phonebook.class.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 

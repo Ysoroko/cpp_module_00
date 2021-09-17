@@ -6,15 +6,12 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:13:06 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 14:53:42 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/17 10:37:50 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_CLASS_HPP
 # define CONTACT_CLASS_HPP
-
-# include <iostream>
-# include <iomanip>
 
 class Contact
 {

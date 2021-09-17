@@ -6,13 +6,13 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 16:01:56 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/17 11:03:23 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "phonebook.hpp"
 
-void	ft_add(Contact phonebook[8], int i)
+void	ft_add(Phonebook phonebook, int i)
 {
 	std::string	first_name;
 	std::string	last_name;
@@ -31,10 +31,10 @@ void	ft_add(Contact phonebook[8], int i)
 	std::cout << "Please enter the contact's darkest secret:\n> ";
 	std::getline(std::cin, darkest_secret);
 
-	phonebook[i].ft_set_values(first_name, last_name, nickname, phone_number, darkest_secret);
+	phonebook.create_new_contact(i, first_name, last_name, nickname, phone_number, darkest_secret);
 }
 
-void	ft_search(Contact phonebook[8], int i)
+void	ft_search(Phonebook phonebook, int i)
 {
 	std::string	first_name;
 	std::string	last_name;
@@ -47,9 +47,9 @@ void	ft_search(Contact phonebook[8], int i)
 	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
 	for (int j = 1; j < i + 1; j++)
 	{
-		first_name = phonebook[j - 1].get_first_name();
-		last_name = phonebook[j - 1].get_last_name();
-		nickname = phonebook[j - 1].get_nickname();
+		first_name = phonebook.get_contact(j - 1).get_first_name();
+		last_name = phonebook.get_contact(j - 1).get_last_name();
+		nickname = phonebook.get_contact(j - 1).get_nickname();
 		if (first_name.length() >= 10)
 		{
 			first_name.resize(9);
@@ -72,14 +72,14 @@ void	ft_search(Contact phonebook[8], int i)
 	std::getline(std::cin, user_index);
 	index = atoi(user_index.c_str());
 	if (index)
-		phonebook[stoi(user_index) - 1].ft_print();
+		phonebook.get_contact(stoi(user_index) - 1).ft_print();
 	return ;
 }
 
 int main(void)
 {
 	std::string		user_command;
-	Contact			phonebook[8];
+	Phonebook		phonebook;
 	int				i;
 
 	i = 0;

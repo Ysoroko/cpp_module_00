@@ -6,11 +6,11 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:15:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 15:33:39 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/17 10:39:52 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "phonebook.hpp"
 
 // Definition and implementation of the constructor
 // : first_name(f) assigns value f to first_name attribute
