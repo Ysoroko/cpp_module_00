@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:15:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 10:39:52 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/17 11:37:22 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,14 @@ std::string	Contact::get_last_name() const
 std::string	Contact::get_nickname() const
 {
 	return (_nickname);
+}
+
+std::string	Contact::get_phone_number() const
+{
+	return (_phone_number);
+}
+
+std::string	Contact::get_darkest_secret() const
+{
+	return (_darkest_secret);
 }
