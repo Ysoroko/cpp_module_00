@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:46:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/20 13:57:01 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/20 14:57:19 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,9 +139,6 @@ int		Account::checkAmount( void ) const
 // [19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 void	Account::displayStatus( void ) const
 {
-	const time_t	now = time(0);
-	tm				*ltm = localtime(&now);
-
 	display_time();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";

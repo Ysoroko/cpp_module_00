@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:55:50 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/16 14:36:30 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/20 15:00:49 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 		{
 			std::cout << (char)(toupper(current_arg[j]));
 		}
+		std::cout << " ";
 	}
 	std::cout << std::endl;
 	return (0);

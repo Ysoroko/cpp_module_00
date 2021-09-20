@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 11:13:57 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/20 12:41:57 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/20 14:56:59 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,5 +41,8 @@ fclean: clean
 	rm -rf $(EXEC)
 	
 re:	fclean all
+
+.cpp.o:
+	${COMPILE} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 .PHONY:	all clean fclean re
