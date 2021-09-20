@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:46:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 15:15:08 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/20 13:08:23 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,29 @@ int	Account::getNbWithdrawals( void )
 void	Account::displayAccountsInfos( void )
 {
 	std::cout <<  "test" << std::endl;
+}
+
+void	Account::makeDeposit( int deposit )
+{
+	_amount += deposit;
+	_nbDeposits++;
+}
+
+bool	Account::makeWithdrawal( int withdrawal )
+{
+	if (_amount < withdrawal)
+		return (false);
+	_amount -= withdrawal;
+	_nbWithdrawals++;
+	return (true);
+}
+
+int		Account::checkAmount( void ) const
+{
+	return (_amount);
+}
+
+void	Account::displayStatus( void ) const
+{
+	std::cout <<  _amount << std::endl;
 }
