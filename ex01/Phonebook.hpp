@@ -1,14 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 10:41:24 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 14:38:27 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/21 09:17:43 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 #include "phonebook_main.hpp"
 
@@ -30,3 +33,5 @@ class Phonebook
 	private:
 		Contact phonebook[8];
 };
+
+#endif
