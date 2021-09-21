@@ -6,11 +6,12 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:46:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/20 15:56:21 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/21 10:37:53 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
+# include <iomanip>
 # include <ctime>
 
 # include "Account.hpp"
@@ -29,15 +30,15 @@ static void	display_time(void)
 	tm				*ltm = localtime(&now);
 
 	std::cout << "[";
-	std::cout << 1900 + ltm->tm_year;
-	// month starts at 0;
-	std::cout << 1 + ltm->tm_mon;
-	std::cout << ltm->tm_mday;
-	std::cout << "_";
-	std::cout << ltm->tm_hour;
-	std::cout << ltm->tm_min;
-	std::cout << ltm->tm_sec;
-	std::cout << "] ";
+    std::cout << 1900 + ltm->tm_year;
+    // month starts at 0;
+    std::cout << std::setfill('0') << std::setw(2) << 1 + ltm->tm_mon;
+    std::cout << std::setfill('0') << std::setw(2) << ltm->tm_mday;
+    std::cout << "_";
+    std::cout << std::setfill('0') << std::setw(2) << ltm->tm_hour;
+    std::cout << std::setfill('0') << std::setw(2) << ltm->tm_min;
+    std::cout << std::setfill('0') << std::setw(2) << ltm->tm_sec;
+    std::cout << "] ";
 }
 
 //[19920104_091532] index:0;amount:42;created
