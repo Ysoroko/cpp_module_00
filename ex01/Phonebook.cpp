@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 10:44:37 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 14:37:24 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:44:18 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,4 @@ void	Phonebook::create_new_contact(int i,
 	std::string f, std::string l, std::string n, std::string ph, std::string d)
 {
 	phonebook[i].ft_set_values(f, l, n, ph, d);
-	printf("Name: [%s]\n", phonebook[i].get_first_name().c_str());
 }
