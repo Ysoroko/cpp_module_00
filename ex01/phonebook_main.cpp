@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/17 14:37:22 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/23 11:27:43 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,10 @@ void	ft_search(Phonebook *phonebook, int i)
 	std::cout << "Please enter the contact's index to see more details:\n> ";
 	std::getline(std::cin, user_index);
 	index = atoi(user_index.c_str());
-	if (index)
+	if (index && index >=1 && index <= i)
 		(*phonebook).get_contact(stoi(user_index) - 1).ft_print();
+	else
+		std::cout << "There is no contact at index " << index << "\n> ";
 	return ;
 }
 
@@ -83,7 +85,7 @@ int main(void)
 	int				i;
 
 	i = 0;
-	while (1)
+	while (!std::cin.eof())
 	{
 		std::cout << "Please enter a command (SEARCH / ADD / EXIT)\n> ";
 		std::getline(std::cin, user_command);
