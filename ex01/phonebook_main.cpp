@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/11/24 11:32:35 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/24 11:37:07 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,8 @@ int main(void)
 			ft_search(&phonebook, i);
 		}
 		else
-			std::cout << "Only ADD, SEARCH and EXIT commands are accepted\n";
+			if (!std::cin.eof())
+				std::cout << "Only ADD, SEARCH and EXIT commands are accepted\n";
 	}
 	return (0);
 }
