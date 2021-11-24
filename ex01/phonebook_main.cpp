@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:18:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/11/23 11:27:43 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/24 11:32:35 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,24 @@ void	ft_add(Phonebook *phonebook, int i)
 
 	std::cout << "Please enter the contact's first name:\n> ";
 	std::getline(std::cin, first_name);
+	if (std::cin.eof())
+		return ;
 	std::cout << "Please enter the contact's last name:\n> ";
 	std::getline(std::cin, last_name);
+	if (std::cin.eof())
+		return ;
 	std::cout << "Please enter the contact's nickname:\n> ";
 	std::getline(std::cin, nickname);
+	if (std::cin.eof())
+		return ;
 	std::cout << "Please enter the contact's phone number:\n> ";
 	std::getline(std::cin, phone_number);
+	if (std::cin.eof())
+		return ;
 	std::cout << "Please enter the contact's darkest secret:\n> ";
 	std::getline(std::cin, darkest_secret);
+	if (std::cin.eof())
+		return ;
 
 	(*phonebook).create_new_contact(i, first_name, last_name, nickname, phone_number, darkest_secret);
 }
@@ -70,11 +80,13 @@ void	ft_search(Phonebook *phonebook, int i)
 	std::cout << std::endl;
 	std::cout << "Please enter the contact's index to see more details:\n> ";
 	std::getline(std::cin, user_index);
+	if (std::cin.eof())
+		return ;
 	index = atoi(user_index.c_str());
 	if (index && index >=1 && index <= i)
 		(*phonebook).get_contact(stoi(user_index) - 1).ft_print();
 	else
-		std::cout << "There is no contact at index " << index << "\n> ";
+		std::cout << "Wrong index" << "\n> ";
 	return ;
 }
 
