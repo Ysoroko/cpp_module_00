@@ -10,6 +10,6 @@ Introduction to CPP
 
 ### Other C++ modules:
 
-Day 0 | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 | Day 7 | Day 8 |
+[Day 00](https://github.com/Ysoroko/cpp_module_00) | [Day 01](https://github.com/Ysoroko/cpp_module_01) | [Day 02](https://github.com/Ysoroko/cpp_module_02) | [Day 03](https://github.com/Ysoroko/cpp_module_03) | [Day 04](https://github.com/Ysoroko/cpp_module_04) | [Day 05](https://github.com/Ysoroko/cpp_module_05) | [Day 06](https://github.com/Ysoroko/cpp_module_06) | [Day 07](https://github.com/Ysoroko/cpp_module_07) | [Day 08](https://github.com/Ysoroko/cpp_module_00) |
 -------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
-[Module_00](https://github.com/Ysoroko/cpp_module_00) | [Module_01](https://github.com/Ysoroko/cpp_module_01) | [Module_02](https://github.com/Ysoroko/cpp_module_02) | [Module_03](https://github.com/Ysoroko/cpp_module_03) | [Module_04](https://github.com/Ysoroko/cpp_module_04) | [Module_05](https://github.com/Ysoroko/cpp_module_05) | [Module_06](https://github.com/Ysoroko/cpp_module_06) | [Module_07](https://github.com/Ysoroko/cpp_module_07) | [Module_08](https://github.com/Ysoroko/cpp_module_08) |
+[ex00](https://github.com/Ysoroko/cpp_module_00/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_01/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_02/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_03/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_04/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_05/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_06/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_07/ex00) | [ex00](https://github.com/Ysoroko/cpp_module_08/ex00) |
